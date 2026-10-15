@@ -1,0 +1,362 @@
+
+        :root {
+            --paper: #f7f5f0;
+            --ink: #23332d;
+            --sub: #6d7972;
+            --green: #557364;
+            --line: #d8ded7
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: #e7eae6;
+            color: var(--ink);
+            font-family: Arial, 'Noto Sans KR', 'Malgun Gothic', sans-serif
+        }
+
+        .deck {
+            max-width: 1180px;
+            margin: 30px auto
+        }
+
+        .slide {
+            position: relative;
+            background: var(--paper);
+            min-height: 660px;
+            aspect-ratio: 16/9;
+            margin: 0 0 24px;
+            overflow: hidden;
+            padding: 65px 75px;
+            box-shadow: 0 10px 35px #253a3020;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: .25em;
+            color: var(--green);
+            font-weight: 700
+        }
+
+        .slide h1 {
+            font-size: clamp(48px, 7vw, 100px);
+            letter-spacing: -.07em;
+            line-height: 1.04;
+            margin: 20px 0
+        }
+
+        .slide h2 {
+            font-size: clamp(32px, 4vw, 58px);
+            letter-spacing: -.055em;
+            line-height: 1.15;
+            margin: 14px 0 22px
+        }
+
+        .lead {
+            font-size: 20px;
+            line-height: 1.75;
+            color: #42574b;
+            max-width: 760px
+        }
+
+        .footer {
+            border-top: 1px solid var(--line);
+            padding-top: 14px;
+            font-size: 12px;
+            letter-spacing: .1em;
+            color: var(--sub);
+            display: flex;
+            justify-content: space-between
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid #b8c9bd;
+            border-radius: 99px;
+            padding: 8px 15px;
+            font-size: 12px;
+            margin: 0 6px 8px 0
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .tile {
+            background: #e7ede6;
+            padding: 28px;
+            min-height: 205px
+        }
+
+        .tile b {
+            font-size: 22px
+        }
+
+        .tile p {
+            line-height: 1.8;
+            color: #536258;
+            font-size: 15px
+        }
+
+        .number {
+            font-size: 64px;
+            color: #a9bcb0;
+            font-weight: 300
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 45px;
+            align-items: start
+        }
+
+        .schedule {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 17px
+        }
+
+        .schedule td {
+            padding: 15px 8px;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top
+        }
+
+        .schedule td:first-child {
+            width: 110px;
+            color: var(--green);
+            font-weight: bold
+        }
+
+        .note {
+            font-size: 14px;
+            color: var(--sub);
+            line-height: 1.8
+        }
+
+        .hero {
+            background: linear-gradient(110deg, #233e32 0%, #4d6a57 70%, #789281 100%);
+            color: #f9f9f3
+        }
+
+        .hero .eyebrow,
+        .hero .lead,
+        .hero .footer {
+            color: #dce8dd
+        }
+
+        .hero .footer {
+            border-color: #ffffff55
+        }
+
+        .hero:after {
+            content: '湯';
+            position: absolute;
+            font-family: serif;
+            font-size: 390px;
+            right: 20px;
+            top: 80px;
+            opacity: .10
+        }
+
+        .visual {
+            min-height: 310px;
+            background: linear-gradient(135deg, #b6c7b6, #e0e5d8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .visual span {
+            font-family: serif;
+            font-size: 170px;
+            color: #607e68;
+            opacity: .45
+        }
+
+        .visual small {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            color: #415c4b;
+            letter-spacing: .2em
+        }
+
+        .bar {
+            height: 10px;
+            background: #d7e1d6;
+            margin: 12px 0 25px;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .bar>div {
+            height: 100%;
+            background: var(--green)
+        }
+
+        .budget {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 18px;
+            border-bottom: 1px solid var(--line);
+            padding: 13px 0;
+            font-size: 19px
+        }
+
+        .budget strong {
+            font-variant-numeric: tabular-nums
+        }
+
+        .daycols {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px
+        }
+
+        .day {
+            border-top: 4px solid var(--green);
+            padding: 20px;
+            background: #e9eee7
+        }
+
+        .day h3 {
+            font-size: 23px;
+            margin: 5px 0 18px
+        }
+
+        .day p {
+            font-size: 15px;
+            line-height: 1.9;
+            margin: 0
+        }
+
+        .day .date {
+            font-size: 12px;
+            color: var(--green);
+            letter-spacing: .12em
+        }
+
+        .sources a {
+            color: var(--green);
+            overflow-wrap: anywhere
+        }
+
+        .sources {
+            font-size: 13px;
+            line-height: 2
+        }
+
+        .nav {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 10;
+            background: #253f33;
+            color: white;
+            border: 0;
+            padding: 13px 18px;
+            border-radius: 40px;
+            cursor: pointer
+        }
+
+        @media(max-width:760px) {
+            .deck {
+                margin: 0
+            }
+
+            .slide {
+                aspect-ratio: auto;
+                min-height: 680px;
+                margin: 0 0 12px;
+                padding: 38px 25px
+            }
+
+            .columns,
+            .grid,
+            .daycols {
+                grid-template-columns: 1fr
+            }
+
+            .tile {
+                min-height: unset;
+                padding: 18px
+            }
+
+            .visual {
+                min-height: 180px
+            }
+
+            .visual span {
+                font-size: 100px
+            }
+
+            .slide h1 {
+                font-size: 58px
+            }
+
+            .slide h2 {
+                font-size: 39px
+            }
+
+            .schedule {
+                font-size: 14px
+            }
+
+            .schedule td:first-child {
+                width: 75px
+            }
+
+            .lead {
+                font-size: 17px
+            }
+
+            .footer {
+                font-size: 10px
+            }
+        }
+
+        @media print {
+            @page {
+                size: landscape;
+                margin: 0
+            }
+
+            body {
+                background: white
+            }
+
+            .deck {
+                margin: 0;
+                max-width: none
+            }
+
+            .slide {
+                margin: 0;
+                box-shadow: none;
+                break-after: page;
+                width: 100vw;
+                height: 100vh;
+                min-height: 0;
+                aspect-ratio: auto
+            }
+
+            .nav {
+                display: none
+            }
+        }
